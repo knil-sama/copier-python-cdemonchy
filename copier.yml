@@ -1,0 +1,24 @@
+_exclude:
+    - project-slug
+
+project_name: 
+  type: str
+  help: Project template
+
+project_slug:
+  type: str
+  help: A slug of the name
+  default: "{% include 'project-slug.jinja' %}"
+
+project_description:
+  type: str
+
+python_version:
+  type: str
+  default: "3.11"
+
+author:
+  type: str
+  default: knil-sama
+
+

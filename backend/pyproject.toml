@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = ""
+authors = ["knil-sama"]
+readme = "README.md"
+
+packages = [
+    {include = "backend"}
+]
+
+[tool.poetry.dependencies]
+python = "^{{ python_version }}"
+
+[tool.poetry.group.test.dependencies]
+pytest = "7.4.0"
+pytest-env = "0.8.2"
+pytest-mock = "3.11.1"
+polyfactory = "2.6.3"
+pytest-cov = "4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
