@@ -1,5 +1,5 @@
 # The builder image, used to build the virtual environment
-FROM python: {{ python_version }}-buster as builder
+FROM python:{{ python_version }}-buster as builder
 
 RUN pip install poetry==1.5.1
 
