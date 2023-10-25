@@ -3,14 +3,15 @@ _exclude:
 
 project_name: 
   type: str
-  help: Project template
+  help: Project name
 
 project_slug:
   type: str
-  help: A slug of the name
+  help: A slug of the name, will be generated from project_name if empty
   default: "{% include 'project-slug.jinja' %}"
 
 project_description:
+  help: Project description
   type: str
 
 python_version:
