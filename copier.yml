@@ -22,7 +22,36 @@ python_version_name:
   type: str
   default: trixie
 
+pydantic_version:
+  type: str
+  default: "2.12.5"
+  when: "{{ python_version != '3.14' }}"
+
+pytest_version:
+  type: str
+  default: "9.0.2"
+  when: "{{ python_version != '3.14' }}"
+
+pytest_env_version:
+  type: str
+  default: "1.5.0"
+  when: "{{ python_version != '3.14' }}"
+
+polyfactory_version:
+  type: str
+  default: "3.2.0"
+  when: "{{ python_version != '3.14' }}"
+
+pytest_cov_version:
+  type: str
+  default:  "7.0.0"
+  when: "{{ python_version != '3.14' }}"
+
 author:
   type: str
   default: knil-sama
 
+_tasks:
+  - "cd backend && uv lock"
+  - "cd models && uv lock"
+  - "cd api && uv lock"

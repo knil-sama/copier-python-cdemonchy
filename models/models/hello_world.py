@@ -6,5 +6,4 @@ from pydantic import (
 )
 
 class HelloWorld(BaseModel):
-    id: UUID =  Field(default_factory=lambda: uuid5())  # noqa: A003
     value: str

@@ -1,24 +1,29 @@
-[tool.poetry]
+[project]
 name = "backend"
 version = "0.1.0"
 description = ""
-authors = ["{{ author }}"]
+authors = [{ name = "{{ author }}"} ]
+maintainers = [{ name = "{{ author  }}"} ]
 readme = "README.md"
+requires-python = ">= {{ python_version }}"
 
-packages = [
-    {include = "backend"}
+dependencies = [
+    "models @ {root:parent:uri}/models" # https://hatch.pypa.io/dev/config/context/
 ]
 
-[tool.poetry.dependencies]
-python = "^{{ python_version }}"
+[dependency-groups]
+test= [
+    "pytest>={{ pytest_version }}",
+    "pytest-env>={{ pytest_env_version }}",
+    "polyfactory>={{ polyfactory_version }}",
+    "pytest-cov>={{ pytest_cov_version }}"
+]
 
-[tool.poetry.group.test.dependencies]
-pytest = "7.4.0"
-pytest-env = "0.8.2"
-pytest-mock = "3.11.1"
-polyfactory = "2.6.3"
-pytest-cov = "4.1.0"
+# begin: required for {root}
+[tool.hatch.metadata]
+allow-direct-references = true
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+# end

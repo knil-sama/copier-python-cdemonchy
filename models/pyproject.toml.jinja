@@ -1,24 +1,19 @@
-[tool.poetry]
+[project]
 name = "models"
 version = "0.1.0"
 description = ""
-authors = ["{{ author }}"]
+authors = [{ name = "{{ author }}"} ]
+maintainers = [{ name = "{{ author  }}"} ]
 readme = "README.md"
-packages = [
-    {include = "models"},
+requires-python = ">= {{ python_version }}"
+dependencies = [
+    "pydantic >= {{ pydantic_version }}"
 ]
 
-[tool.poetry.dependencies]
-python = "^{{ python_version }}"
-pydantic = "^{{ pydantic_version }}"
-
-[tool.poetry.group.test.dependencies]
-pytest = "7.4.0"
-pytest-env = "0.8.2"
-pytest-mock = "3.11.1"
-polyfactory = "2.6.3"
-pytest-cov = "4.1.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+test= [
+    "pytest>={{ pytest_version }}",
+    "pytest-env>={{ pytest_env_version }}",
+    "polyfactory>={{ polyfactory_version }}",
+    "pytest-cov>={{ pytest_cov_version }}"
+]

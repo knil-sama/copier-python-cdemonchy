@@ -15,7 +15,7 @@ services:
             context: .
             dockerfile: ./backend/Dockerfile
         restart: always
-        command: ./backend/main.py
+        command: uv run python backend/main.py
         depends_on:
             - postgres
     
@@ -24,7 +24,9 @@ services:
             context: .
             dockerfile: ./api/Dockerfile
         restart: always
-        command: ./api/main.py
+        command: uv run fastapi dev --host 0.0.0.0 api/main.py
         depends_on:
             - postgres
             - backend
+        ports:
+            - 8000:8000
