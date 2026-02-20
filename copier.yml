@@ -16,10 +16,13 @@ project_description:
 
 python_version:
   type: str
-  default: "3.11"
+  default: "3.14"
+
+python_version_name:
+  type: str
+  default: trixie
 
 author:
   type: str
   default: knil-sama
-
 
