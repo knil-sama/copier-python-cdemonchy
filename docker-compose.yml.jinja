@@ -24,7 +24,7 @@ services:
             context: .
             dockerfile: ./api/Dockerfile
         restart: always
-        command: ./backend/main.py
+        command: ./api/main.py
         depends_on:
             - postgres
             - backend
