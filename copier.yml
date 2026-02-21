@@ -47,6 +47,7 @@ psycopg_version:
   default: 3.3.3
   when: "{{ python_version != '3.14' }}"
 
+pytest_cov_version:
   type: str
   default:  "7.0.0"
   when: "{{ python_version != '3.14' }}"

@@ -28,6 +28,9 @@ uv run pytest --cov=api
 
 Either import the integraton_tests folder as a Bruno workspace in the GUI of Bruno
 or run the following with the cli
+
+The API need to be running see [this](../README.md#run-docker)
+
 ```bash
 cd integration_tests
 bru run --reporter-html results.html
