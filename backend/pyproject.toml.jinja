@@ -8,6 +8,9 @@ readme = "README.md"
 requires-python = ">= {{ python_version }}"
 
 dependencies = [
+    "psycopg[binary] >= {{ psycopg_version }}",
+    "orjson >= 3.11.7",
+    "pandas >= 3.0.1",
     "models @ {root:parent:uri}/models" # https://hatch.pypa.io/dev/config/context/
 ]
 
