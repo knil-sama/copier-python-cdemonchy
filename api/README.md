@@ -1,13 +1,35 @@
-Shared model between services, didn't want to go into full hexagonal architecture here
+Fatspi for the project
 
-# Install and run it
+# Requirement
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/)  
+Install [bruno](https://docs.usebruno.com/bruno-basics/download) or the [cli](https://docs.usebruno.com/bru-cli/installation)
+
+## Update dependencies
 
 ```bash
-poetry install
+uv lock
 ```
 
 # Test
 
+
 ```bash
-poetry run pytest
+uv run pytest
 ```
+
+# Coverage
+
+```bash
+uv run pytest --cov=api
+```
+
+# Integration test
+
+Either import the integraton_tests folder as a Bruno workspace in the GUI of Bruno
+or run the following with the cli
+```bash
+cd integration_tests
+bru run --reporter-html results.html
+```
+

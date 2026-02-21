@@ -1,13 +1,23 @@
 Backend that handle most of the work
 
-# Install and run it
+# Requirement
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
+
+## Update dependencies
 
 ```bash
-poetry install
+uv lock
 ```
 
 # Test
 
 ```bash
-poetry run pytest
+uv run pytest
+```
+
+# Coverage
+
+```bash
+uv run pytest --cov=api
 ```

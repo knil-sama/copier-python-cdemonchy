@@ -1,13 +1,23 @@
 Shared model between services, didn't want to go into full hexagonal architecture here
 
-# Install and run it
+# Requirement
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
+
+# Update dependencies
 
 ```bash
-poetry install
+uv lock
 ```
 
 # Test
 
 ```bash
-poetry run pytest
+uv run pytest
+```
+
+# Coverage
+
+```bash
+uv run pytest --cov=api
 ```

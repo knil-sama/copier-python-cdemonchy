@@ -4,29 +4,26 @@
 
 # Testing
 
-# Run test
+## Run test
 
-# Run coverage
+[models](./models/README.md#test)  
+[backend](./backend/README.md#test)  
+[api](./api/README.md#test)  
 
-# Run API test
+## Run API test
 
-`bruno`
+[integration test](./api/README.md#integration-test)
 
 # Usage
-
-## Update dependencies
-
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
-
-In each folder where the dependencies were updated
-
-`uv lock`
 
 ## Run docker
 
 Install (docker)[https://docs.docker.com/desktop/] and (docker-compose)[https://docs.docker.com/compose/]
 
 `docker-compose up` or `docker compose up`
+
+[!WARNING]
+If you run into an issue with the `uv sync` step in docker you may need to update dependencies in the corresponding folder see their README
 
 ## Open api docs
 

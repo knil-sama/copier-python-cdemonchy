@@ -1,0 +1,12 @@
+opencollection: 1.0.0
+info:
+  name: "{{ project_name }}"
+  type: workspace
+
+collections:
+  - name: "api"
+    path: "collections/api"
+
+specs:
+
+docs: ''
