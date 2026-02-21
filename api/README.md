@@ -32,7 +32,7 @@ or run the following with the cli
 The API need to be running see [this](../README.md#run-docker)
 
 ```bash
-cd integration_tests
+cd integration_tests/collections/api
 bru run --reporter-html results.html
 ```
 

@@ -19,5 +19,5 @@ uv run pytest
 # Coverage
 
 ```bash
-uv run pytest --cov=api
+uv run pytest --cov=backend
 ```
